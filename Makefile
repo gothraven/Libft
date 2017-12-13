@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 15:23:16 by szaghban          #+#    #+#              #
-#    Updated: 2017/12/13 18:22:32 by szaghban         ###   ########.fr        #
+#    Updated: 2017/12/13 19:31:32 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ SNAME := libft.so
 SRC := srcs/
 INCLUDES := includes/
 FUNS := ft_bzero ft_memcpy ft_memmove ft_memset ft_memccpy ft_memchr \
-		ft_memcmp
+		ft_memcmp ft_strlen ft_strdup ft_strcpy ft_strncpy ft_strcat \
+		ft_strncat ft_strlcat ft_strchr
 FLAGS := -Wall -Wextra -Werror
 INCF = -I $(INCLUDES)
 BINS = $(patsubst %,%.o,$(FUNS))
