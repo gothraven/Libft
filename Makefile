@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 15:23:16 by szaghban          #+#    #+#              #
-#    Updated: 2017/11/09 19:20:17 by szaghban         ###   ########.fr        #
+#    Updated: 2017/12/13 18:22:32 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME := libft.a
 SNAME := libft.so
 SRC := srcs/
 INCLUDES := includes/
-FUNS := ft_bzero ft_memcpy ft_memmove ft_memset ft_memccpy
+FUNS := ft_bzero ft_memcpy ft_memmove ft_memset ft_memccpy ft_memchr \
+		ft_memcmp
 FLAGS := -Wall -Wextra -Werror
 INCF = -I $(INCLUDES)
 BINS = $(patsubst %,%.o,$(FUNS))
@@ -40,5 +41,5 @@ fclean: clean
 
 re: fclean all
 
-norme:
-	@norminette */*.c
+norme: fclean
+	@norminette $(INCLUDES)/*.h $(SRC)/*.c
