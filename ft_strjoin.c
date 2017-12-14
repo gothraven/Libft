@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 00:55:36 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/14 01:26:03 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/14 01:41:25 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	if (!(tmp = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
 		return (NULL);
-	return (ft_strcat(ft_strcat(tmp, s1),s2));
+	return (ft_strcat(ft_strcat(tmp, s1), s2));
 }

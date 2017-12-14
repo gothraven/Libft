@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 15:23:16 by szaghban          #+#    #+#              #
-#    Updated: 2017/12/14 00:56:45 by szaghban         ###   ########.fr        #
+#    Updated: 2017/12/14 03:17:18 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ FUNS := ft_bzero ft_memcpy ft_memmove ft_memset ft_memccpy ft_memchr \
 		ft_strcmp ft_atoi ft_isalpha ft_isdigit ft_isalnum ft_isascii \
 		ft_toupper ft_tolower ft_isprint ft_strncmp ft_memalloc ft_memdel \
 		ft_strnew ft_strdel ft_strclr ft_striter ft_striteri ft_strmap \
-		ft_strmapi ft_strequ ft_strnequ ft_strsub ft_strjoin
+		ft_strmapi ft_strequ ft_strnequ ft_strsub ft_strjoin ft_strtrim \
+		ft_strsplit ft_itoa
 FLAGS := -Wall -Wextra -Werror
 INCF = -I $(INCLUDES)
 BINS = $(patsubst %,%.o,$(FUNS))

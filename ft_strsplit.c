@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/14 00:02:10 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/14 01:41:07 by szaghban         ###   ########.fr       */
+/*   Created: 2017/12/14 03:12:51 by szaghban          #+#    #+#             */
+/*   Updated: 2017/12/14 03:20:50 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+char	**ft_strsplit(char const *s, char c)
 {
-	size_t	i;
-
-	if (!s || !f)
-		return ;
-	i = -1;
-	while (s[++i])
-		f(&s[i]);
+	(void)c;
+	if (!s)
+		return (NULL);
+	return ((char **)s);
 }
