@@ -6,19 +6,20 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 15:23:16 by szaghban          #+#    #+#              #
-#    Updated: 2017/12/13 22:52:05 by szaghban         ###   ########.fr        #
+#    Updated: 2017/12/14 00:56:45 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := libft.a
 SNAME := libft.so
-SRC := srcs/
-INCLUDES := includes/
+INCLUDES := .
 FUNS := ft_bzero ft_memcpy ft_memmove ft_memset ft_memccpy ft_memchr \
 		ft_memcmp ft_strlen ft_strdup ft_strcpy ft_strncpy ft_strcat \
 		ft_strncat ft_strlcat ft_strchr ft_strrchr ft_strstr ft_strnstr \
 		ft_strcmp ft_atoi ft_isalpha ft_isdigit ft_isalnum ft_isascii \
-		ft_toupper ft_tolower ft_isprint ft_strncmp
+		ft_toupper ft_tolower ft_isprint ft_strncmp ft_memalloc ft_memdel \
+		ft_strnew ft_strdel ft_strclr ft_striter ft_striteri ft_strmap \
+		ft_strmapi ft_strequ ft_strnequ ft_strsub ft_strjoin
 FLAGS := -Wall -Wextra -Werror
 INCF = -I $(INCLUDES)
 BINS = $(patsubst %,%.o,$(FUNS))
@@ -28,7 +29,7 @@ BINS = $(patsubst %,%.o,$(FUNS))
 all: $(NAME)
 
 $(BINS):
-	@gcc $(INCF) $(FLAGS) -c $(patsubst %.o,$(SRC)%.c,$@)
+	@gcc $(INCF) $(FLAGS) -c $(patsubst %.o,%.c,$@)
 
 $(NAME): $(BINS)
 	@ar rc $(NAME) $(BINS)
@@ -45,4 +46,4 @@ fclean: clean
 re: fclean all
 
 norme: fclean
-	@norminette $(INCLUDES)/*.h $(SRC)/*.c
+	@norminette *.h *.c
