@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/14 03:21:23 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/19 18:56:19 by szaghban         ###   ########.fr       */
+/*   Created: 2017/12/19 18:44:24 by szaghban          #+#    #+#             */
+/*   Updated: 2017/12/19 18:59:09 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_putendl(char const *s)
 {
-	ft_putchar_fd(c, STDOUT);
+	ft_putendl_fd(s, STDOUT);
 }

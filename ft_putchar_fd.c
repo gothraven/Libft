@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/14 03:21:23 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/19 18:56:19 by szaghban         ###   ########.fr       */
+/*   Created: 2017/12/19 18:51:39 by szaghban          #+#    #+#             */
+/*   Updated: 2017/12/19 19:00:10 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_putchar_fd(char c, int fd)
 {
-	ft_putchar_fd(c, STDOUT);
+	write(fd, &c, 1);
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/14 01:43:33 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/14 02:42:32 by szaghban         ###   ########.fr       */
+/*   Created: 2017/12/19 18:46:06 by szaghban          #+#    #+#             */
+/*   Updated: 2017/12/19 18:58:25 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+void	ft_putnbr(int n)
 {
-	return (NULL);
+	ft_putnbr_fd(n, STDOUT);
 }

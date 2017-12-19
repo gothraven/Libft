@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 01:43:33 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/18 22:22:49 by goth-rave        ###   ########.fr       */
+/*   Updated: 2017/12/19 18:29:46 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 char	*ft_strtrim(char const *s)
 {
 	char const	*tmp;
-	size_t	i;
-	size_t	j;
 
 	if (!s)
 		return (NULL);
