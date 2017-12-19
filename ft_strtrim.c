@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 01:43:33 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/14 03:12:26 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/18 22:22:49 by goth-rave        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char	*tmp;
+	char const	*tmp;
 	size_t	i;
 	size_t	j;
 
 	if (!s)
 		return (NULL);
-	if (!(tmp = ft_strnew(ft_strlen(s) + 1)))
-		return (NULL);
-	i = -1;
-	j = -1;
-	while (s[++i])
-		if (s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
-			tmp[++j] = s[i];
-	return (tmp);
+	while (*s == ' ' || *s == '\t' || *s == '\n')
+		s++;
+	if (*s == '\0')
+		return (ft_strnew(0));
+	tmp = s + ft_strlen(s) - 1;
+	while (*tmp == ' ' || *tmp == '\t' || *tmp == '\n')
+		tmp--;
+	return (ft_strsub(s, 0, tmp - s + 1));
 }
