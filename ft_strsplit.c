@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 03:12:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/19 23:10:53 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/19 23:48:01 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ char	**ft_strsplit(char const *s, char c)
 	int		j;
 
 	words_nb = ft_word_counter(s, c) + 1;
-	if (words_nb == -1 || !(tmp = (char **)malloc((words_nb) * sizeof(char **))))
+	if (words_nb == -1
+			|| !(tmp = (char **)malloc((words_nb) * sizeof(char **))))
 		return (NULL);
 	i = 0;
 	while (--words_nb > 0)

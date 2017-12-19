@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:04:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/19 18:56:00 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/19 23:49:01 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,19 @@
 # define STDIN 0
 # define STDOUT 1
 
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *b, size_t len);
-void	*ft_memcpy(void *dest, const void *src, size_t len);
-void	*ft_memmove(void *dst, const void *src, size_t len);
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
-void	*ft_memchr(const void *src, int c, size_t n);
+typedef struct			s_list
+{
+	void				*content;
+	size_t				content_size;
+	struct s_list		*next;
+}						t_list;
+
+void					*ft_memset(void *b, int c, size_t len);
+void					ft_bzero(void *b, size_t len);
+void					*ft_memcpy(void *dest, const void *src, size_t len);
+void					*ft_memmove(void *dst, const void *src, size_t len);
+void					*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void					*ft_memchr(const void *src, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
@@ -74,5 +81,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+t_list	*ft_lstnew(void const *content, size_t content_size);
 
 #endif
