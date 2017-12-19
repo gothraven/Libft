@@ -6,14 +6,63 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 03:16:48 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/14 03:19:37 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/19 23:03:51 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int		ft_nbdegits(int n, int neg)
+{
+	long	nb;
+	int		i;
+
+	nb = (long)n * neg;
+	i = 1;
+	while ((nb / 10) > 0)
+	{
+		i++;
+		nb = nb / 10;
+	}
+	return (neg == -1 ? i + 1 : i);
+}
+
+void	ft_cpdegits(char *tab, int n, int neg)
+{
+	long nb;
+
+	nb = (long)n * neg;
+	*tab++ = (nb % 10) + '0';
+	while ((nb / 10) > 0)
+	{
+		nb = nb / 10;
+		*tab++ = (nb % 10) + '0';
+	}
+	if (neg == -1)
+		*tab++ = '-';
+}
+
+void	ft_strrev(char *tab)
+{
+	char	tmp[ft_strlen(tab)];
+	int		i;
+
+	i = -1;
+	while (tab[++i])
+		tmp[i] = tab[i];
+	while (--i >= 0)
+		*tab++ = tmp[i];
+}
+
 char	*ft_itoa(int n)
 {
-	(void)n;
-	return (NULL);
+	char	*tmp;
+	int		neg;
+
+	neg = (n >= 0 ? 1 : -1);
+	if (!(tmp = ft_strnew(ft_nbdegits(n, neg))))
+		return (NULL);
+	ft_cpdegits(tmp, n, neg);
+	ft_strrev(tmp);
+	return (tmp);
 }

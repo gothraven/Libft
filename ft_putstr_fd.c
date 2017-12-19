@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 19:00:29 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/19 19:08:23 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/19 23:13:09 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	while (*s)
-		ft_putchar_fd(*s++, fd);
+	if (s != NULL)
+		while (*s)
+			ft_putchar_fd(*s++, fd);
 }

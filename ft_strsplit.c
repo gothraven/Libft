@@ -6,20 +6,31 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 03:12:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/19 19:50:58 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/19 23:10:53 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-size_t	ft_word_counter(char const *s, char c)
+int		ft_letter_counter(char const *s, char c)
 {
-	size_t i;
-	size_t word;
+	int		i;
+
+	i = -1;
+	while (s[++i] && s[i] != c)
+		;
+	return (i);
+}
+
+int		ft_word_counter(char const *s, char c)
+{
+	int		i;
+	int		word;
 
 	i = -1;
 	word = 0;
+	if (s == NULL)
+		return (i);
 	while (s[++i] && s[i] == c)
 		;
 	while (s[i])
@@ -35,15 +46,28 @@ size_t	ft_word_counter(char const *s, char c)
 
 char	**ft_strsplit(char const *s, char c)
 {
-	char *tmp;
-	size_t t;
-	t = ft_word_counter(s, c);
-	printf("%lu\n", t);
-	return ((char **)s);
-}
+	char	**tmp;
+	int		words_nb;
+	int		letter_nb;
+	int		i;
+	int		j;
 
-int	main(int argc, const char *argv[])
-{
-	ft_strsplit(argv[1], argv[2][0]);
-	return 0;
+	words_nb = ft_word_counter(s, c) + 1;
+	if (words_nb == -1 || !(tmp = (char **)malloc((words_nb) * sizeof(char **))))
+		return (NULL);
+	i = 0;
+	while (--words_nb > 0)
+	{
+		while (*s && *s == c)
+			s++;
+		letter_nb = ft_letter_counter(s, c);
+		if (!(tmp[i] = ft_strnew(letter_nb + 1)))
+			return (NULL);
+		j = 0;
+		while (*s && *s != c)
+			tmp[i][j++] = *s++;
+		i++;
+	}
+	tmp[i] = NULL;
+	return (tmp);
 }
