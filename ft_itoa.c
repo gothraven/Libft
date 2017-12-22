@@ -6,13 +6,13 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 03:16:48 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/19 23:03:51 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/22 01:40:43 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_nbdegits(int n, int neg)
+static int		ft_nbdegits(int n, int neg)
 {
 	long	nb;
 	int		i;
@@ -27,7 +27,7 @@ int		ft_nbdegits(int n, int neg)
 	return (neg == -1 ? i + 1 : i);
 }
 
-void	ft_cpdegits(char *tab, int n, int neg)
+static void		ft_cpdegits(char *tab, int n, int neg)
 {
 	long nb;
 
@@ -42,7 +42,7 @@ void	ft_cpdegits(char *tab, int n, int neg)
 		*tab++ = '-';
 }
 
-void	ft_strrev(char *tab)
+static void		ft_strrev(char *tab)
 {
 	char	tmp[ft_strlen(tab)];
 	int		i;
@@ -54,7 +54,7 @@ void	ft_strrev(char *tab)
 		*tab++ = tmp[i];
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*tmp;
 	int		neg;

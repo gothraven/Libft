@@ -6,13 +6,13 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 03:12:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/19 23:48:01 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/22 01:41:29 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_letter_counter(char const *s, char c)
+static int		ft_letter_counter(char const *s, char c)
 {
 	int		i;
 
@@ -22,7 +22,7 @@ int		ft_letter_counter(char const *s, char c)
 	return (i);
 }
 
-int		ft_word_counter(char const *s, char c)
+static int		ft_word_counter(char const *s, char c)
 {
 	int		i;
 	int		word;
@@ -44,7 +44,7 @@ int		ft_word_counter(char const *s, char c)
 	return (word);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**tmp;
 	int		words_nb;
