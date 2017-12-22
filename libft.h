@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:04:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/22 02:43:27 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/22 02:54:15 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ void					ft_lstadd(t_list **alst, t_list *lstnew);
 void					ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void					ft_printbit(int val);
-unsigned				int ft_power2(unsigned int val);
+unsigned int			ft_power2(unsigned int val);
 void					ft_printbit_rev(int val);
 int						ft_printnbit(int val, int max);
 int						ft_printnbit_rev(int val, int max);
