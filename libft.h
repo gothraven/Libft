@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:04:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/22 01:42:27 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/22 02:43:27 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,19 @@ void					ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void					ft_lstadd(t_list **alst, t_list *lstnew);
 void					ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void					ft_printbit(int val);
+unsigned				int ft_power2(unsigned int val);
+void					ft_printbit_rev(int val);
+int						ft_printnbit(int val, int max);
+int						ft_printnbit_rev(int val, int max);
+char					*ft_itoa_base(int nb, int base);
+size_t					ft_lennbr_base(long nb, size_t b);
+char					*ft_strcjoin(char const *s1, char const *s2, char c);
+int						ft_isspace(int c);
+char					*ft_strmerge(char **str);
+int						ft_printtab_sep(int *tab, int size, char c);
+void					ft_printbase(int nb, size_t base);
+int						ft_isupper(int c);
+int						ft_islower(int c);
 
 #endif
