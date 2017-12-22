@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:04:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/22 00:59:21 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/12/22 01:07:18 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,6 @@ void					ft_lstdelone(t_list **alst, void (*del)(void *,
 			size_t));
 void					ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void					ft_lstadd(t_list **alst, t_list *lstnew);
+void					ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
 #endif
