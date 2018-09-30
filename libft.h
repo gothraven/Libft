@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:04:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/12/22 02:59:02 by szaghban         ###   ########.fr       */
+/*   Updated: 2018/09/30 15:52:47 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ int						ft_printtab_sep(int *tab, int size, char c);
 void					ft_printbase(int nb, size_t base);
 int						ft_isupper(int c);
 int						ft_islower(int c);
+int						ft_xtoi(char *s);
 
 #endif

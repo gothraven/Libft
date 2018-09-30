@@ -26,7 +26,8 @@ FUNS := ft_bzero ft_memcpy ft_memmove ft_memset ft_memccpy ft_memchr \
 	ft_printbit ft_printbit_rev ft_printnbit ft_printnbit_rev\
 	ft_power2 ft_itoa_base ft_lennbr_base\
 	ft_strcjoin ft_strmerge ft_printtab_sep\
-	ft_printbase ft_isupper ft_islower
+	ft_printbase ft_isupper ft_islower\ ft_xtoi
+
 FLAGS := -Wall -Wextra -Werror
 INCF = -I $(INCLUDES)
 BINS = $(patsubst %,%.o,$(FUNS))
