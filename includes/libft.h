@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gothraven <gothraven@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:04:51 by szaghban          #+#    #+#             */
-/*   Updated: 2018/09/30 15:52:47 by szaghban         ###   ########.fr       */
+/*   Updated: 2018/09/30 18:41:54 by gothraven        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include "gnl.h"
 
 # define ABS(x) (x < 0 ? -x : x)
 # define STDIN 0

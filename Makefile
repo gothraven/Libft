@@ -12,7 +12,7 @@
 
 NAME := libft.a
 SNAME := libft.so
-INCLUDES := .
+INCLUDES := ./includes
 FUNS := ft_bzero ft_memcpy ft_memmove ft_memset ft_memccpy ft_memchr \
 	ft_memcmp ft_strlen ft_strdup ft_strcpy ft_strncpy ft_strcat \
 	ft_strncat ft_strlcat ft_strchr ft_strrchr ft_strstr ft_strnstr \
@@ -26,7 +26,7 @@ FUNS := ft_bzero ft_memcpy ft_memmove ft_memset ft_memccpy ft_memchr \
 	ft_printbit ft_printbit_rev ft_printnbit ft_printnbit_rev\
 	ft_power2 ft_itoa_base ft_lennbr_base\
 	ft_strcjoin ft_strmerge ft_printtab_sep\
-	ft_printbase ft_isupper ft_islower\ ft_xtoi
+	ft_printbase ft_isupper ft_islower ft_xtoi ft_gnl\
 
 FLAGS := -Wall -Wextra -Werror
 INCF = -I $(INCLUDES)
@@ -37,7 +37,7 @@ BINS = $(patsubst %,%.o,$(FUNS))
 all: $(NAME)
 
 $(BINS):
-	@gcc $(INCF) $(FLAGS) -c $(patsubst %.o,%.c,$@)
+	@gcc $(INCF) $(FLAGS) -c srcs/$(patsubst %.o,%.c,$@)
 
 $(NAME): $(BINS)
 	@ar rc $(NAME) $(BINS)
