@@ -6,7 +6,7 @@
 /*   By: gothraven <gothraven@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:04:51 by szaghban          #+#    #+#             */
-/*   Updated: 2018/09/30 18:41:54 by gothraven        ###   ########.fr       */
+/*   Updated: 2018/10/27 16:17:55 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ char					*ft_strjoin(char const *s1, char const *s2);
 char					*ft_strtrim(char const *s);
 char					**ft_strsplit(char const *s, char c);
 char					*ft_itoa(int n);
+char					*ft_ftoa(float n, int offset);
 void					ft_putchar(char c);
 void					ft_putstr(char const *s);
 void					ft_putendl(char const *s);
@@ -107,5 +108,6 @@ void					ft_printbase(int nb, size_t base);
 int						ft_isupper(int c);
 int						ft_islower(int c);
 int						ft_xtoi(char *s);
+int						ft_pow(int x, unsigned int y);
 
 #endif
