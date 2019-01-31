@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gothraven <gothraven@student.42.fr>        +#+  +:+       +#+        */
+/*   By: szaghban <szaghban@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:04:51 by szaghban          #+#    #+#             */
-/*   Updated: 2018/10/27 16:17:55 by szaghban         ###   ########.fr       */
+/*   Updated: 2019/01/31 16:29:07 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,6 @@ int						ft_isupper(int c);
 int						ft_islower(int c);
 int						ft_xtoi(char *s);
 int						ft_pow(int x, unsigned int y);
+int						ft_isspace(int c);
 
 #endif

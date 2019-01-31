@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: szaghban <szaghban@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 15:23:16 by szaghban          #+#    #+#              #
-#    Updated: 2018/10/27 16:11:48 by szaghban         ###   ########.fr        #
+#    Updated: 2019/01/31 16:29:18 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ FUNS := ft_bzero ft_memcpy ft_memmove ft_memset ft_memccpy ft_memchr \
 	ft_printbit ft_printbit_rev ft_printnbit ft_printnbit_rev\
 	ft_power2 ft_itoa_base ft_lennbr_base ft_ftoa\
 	ft_strcjoin ft_strmerge ft_printtab_sep ft_pow\
-	ft_printbase ft_isupper ft_islower ft_xtoi ft_gnl\
+	ft_printbase ft_isupper ft_islower ft_xtoi ft_gnl ft_isspace\
 
 FLAGS := -Wall -Wextra -Werror
 INCF = -I $(INCLUDES)
