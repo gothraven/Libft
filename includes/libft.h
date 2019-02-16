@@ -6,7 +6,7 @@
 /*   By: szaghban <szaghban@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:04:51 by szaghban          #+#    #+#             */
-/*   Updated: 2019/01/31 16:29:07 by szaghban         ###   ########.fr       */
+/*   Updated: 2019/02/16 15:20:09 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,5 +111,7 @@ int						ft_xtoi(char *s);
 int						ft_pow(int x, unsigned int y);
 int						ft_isspace(int c);
 int						ft_abs(int i);
+int						ft_min(int a, int b);
+int						ft_max(int a, int b);
 
 #endif

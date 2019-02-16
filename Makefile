@@ -6,7 +6,7 @@
 #    By: szaghban <szaghban@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 15:23:16 by szaghban          #+#    #+#              #
-#    Updated: 2019/01/31 16:29:18 by szaghban         ###   ########.fr        #
+#    Updated: 2019/02/16 15:19:27 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ FUNS := ft_bzero ft_memcpy ft_memmove ft_memset ft_memccpy ft_memchr \
 	ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd ft_lstnew \
 	ft_lstdelone ft_lstdel ft_lstadd ft_lstiter ft_lstmap ft_lstrev \
 	ft_printbit ft_printbit_rev ft_printnbit ft_printnbit_rev\
-	ft_power2 ft_itoa_base ft_lennbr_base ft_ftoa\
+	ft_power2 ft_itoa_base ft_lennbr_base ft_ftoa ft_min ft_max\
 	ft_strcjoin ft_strmerge ft_printtab_sep ft_pow ft_abs\
 	ft_printbase ft_isupper ft_islower ft_xtoi ft_gnl ft_isspace\
 
