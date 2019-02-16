@@ -25,7 +25,7 @@ FUNS := ft_bzero ft_memcpy ft_memmove ft_memset ft_memccpy ft_memchr \
 	ft_lstdelone ft_lstdel ft_lstadd ft_lstiter ft_lstmap ft_lstrev \
 	ft_printbit ft_printbit_rev ft_printnbit ft_printnbit_rev\
 	ft_power2 ft_itoa_base ft_lennbr_base ft_ftoa\
-	ft_strcjoin ft_strmerge ft_printtab_sep ft_pow\
+	ft_strcjoin ft_strmerge ft_printtab_sep ft_pow ft_abs\
 	ft_printbase ft_isupper ft_islower ft_xtoi ft_gnl ft_isspace\
 
 FLAGS := -Wall -Wextra -Werror

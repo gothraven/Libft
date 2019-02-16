@@ -110,5 +110,6 @@ int						ft_islower(int c);
 int						ft_xtoi(char *s);
 int						ft_pow(int x, unsigned int y);
 int						ft_isspace(int c);
+int						ft_abs(int i);
 
 #endif
